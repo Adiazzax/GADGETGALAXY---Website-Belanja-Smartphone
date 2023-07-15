@@ -1,16 +1,15 @@
+<!-- Digunakan untuk proses logout akun -->
 <?php
 session_start();
-if (isset($_SESSION['username'])) {
-  $loggedIn = true;
-} else {
-  $loggedIn = false;
-}
 if (isset($_GET['logout'])) {
   unset($_SESSION['username']);
   header("Location: login.php");
   exit();
 }
+// memeriksa apakah pengguna itu telah login 
+$loggedIn = isset($_SESSION['username']);
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -47,6 +46,7 @@ if (isset($_GET['logout'])) {
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
+            <!-- digunakan untuk mengarahkan ke halaman login.php ketika menekan tombol logout -->
             <?php
             if ($loggedIn) {
               echo '<a class="nav-link" href="?logout=true">Logout</a>';

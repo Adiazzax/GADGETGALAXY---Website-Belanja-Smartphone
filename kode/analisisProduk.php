@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
   <title>Analisis Penjualan</title>
@@ -51,24 +51,6 @@
     </ul>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <?php
-          session_start();
-          $loggedIn = false;
-
-          if (isset($_SESSION['username'])) {
-            $loggedIn = true;
-          }
-
-          if ($loggedIn) {
-            echo '<a class="nav-link" href="akunadmin.php">';
-            echo '<img src="../bahan1/icon-user.png" alt="Account Icon" height="25" class="mr-1" />';
-            echo '</a>';
-          } else {
-            echo '<a class="nav-link" href="login.php">';
-            echo '<img src="../bahan1/icon-user.png" alt="Account Icon" height="25" class="mr-1" />';
-            echo '</a>';
-          }
-        ?>
       </li>
     </ul>
   </div>
