@@ -1,3 +1,4 @@
+<!-- koneksi database -->
 <?php
 session_start();
 $servername = "localhost";
@@ -10,7 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
-
+// metode login
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -27,26 +28,30 @@ if (isset($_POST['login'])) {
         $errors['password'] = "Kata Sandi harus diisi.";
         $isValid = false;
     }
-
+// memvalidasi pengguna melalui akun yang dimasukkan
     if ($isValid) {
         $sql = "SELECT * FROM usermasuk WHERE username='$username'";
         $result = $conn->query($sql);
-
+// berfungsi apakah username susai dg database atau tidak.
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
+            // mengecek apakah pw sesuai dengan databasse, jika iya maka var username akan dibuat
             if (password_verify($password, $row['password'])) {
                 $_SESSION['username'] = $username;
-
+                // jika login sbg admin maka akan masuk ke halaman homeadmin.php
                 if ($username === 'admin' && $password === 'admin123') {
                     header("Location: homeadmin.php");
                 } else {
+                  // jika login sbg pengguna akan login ke home.php
                     header("Location: home.php");
                 }
                 exit();
             } else {
+              // jika pw salah maka akan menampilkan pesan error
                 $errors['password'] = "Password salah.";
             }
         } else {
+          // jika suername salah maka akan menampilkan pesan error
             $errors['username'] = "Username tidak ditemukan.";
         }
     }
@@ -99,6 +104,7 @@ if (isset($_POST['login'])) {
   </style>
 </head>
 <body>
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="#footer">
       <img
@@ -117,7 +123,7 @@ if (isset($_POST['login'])) {
       </ul>
     </div>
   </nav>
-
+<!-- isi -->
   <div class="tengahh">
     <div class="container mt-5">
       <div class="row">
@@ -140,6 +146,7 @@ if (isset($_POST['login'])) {
                 name="username"
                 placeholder="Masukkan username"
               />
+              <!-- pesan error -->
               <?php echo isset($errors['username']) ? '<small class="text-danger">' . $errors['username'] . '</small>' : ''; ?>
             </div>
             <div class="form-group">
@@ -151,6 +158,7 @@ if (isset($_POST['login'])) {
                 name="password"
                 placeholder="Masukkan kata sandi"
               />
+              <!-- menampilkan pesan error -->
               <?php echo isset($errors['password']) ? '<small class="text-danger">' . $errors['password'] . '</small>' : ''; ?>
             </div>
             <div class="form-group">

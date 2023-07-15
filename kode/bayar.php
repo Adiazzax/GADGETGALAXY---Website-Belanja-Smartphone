@@ -28,6 +28,7 @@
   </style>
 </head>
 <body>
+  <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#footer">
         <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
@@ -41,6 +42,7 @@
         </ul>
       </div>
     </nav>
+    <!-- isi -->
 <div class="tengah">
 <div class="container">
     <div class="jumbotron">

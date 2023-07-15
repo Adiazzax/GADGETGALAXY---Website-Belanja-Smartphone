@@ -33,6 +33,7 @@ $loggedIn = isset($_SESSION['username']);
     </style>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#footer">
         <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
@@ -60,7 +61,8 @@ $loggedIn = isset($_SESSION['username']);
         </ul>
       </div>
     </nav>
-
+<!-- Akhir dari Navbar -->
+<!-- Isi -->
     <div class="tengah">
       <div class="container mt-5">
         <ul class="account-list">
@@ -73,7 +75,8 @@ $loggedIn = isset($_SESSION['username']);
         </ul>
       </div>
     </div>
-
+<!-- akhir dari isi -->
+<!-- footer -->
     <footer class="bg-light">
       <div class="container">
         <div class="row">
@@ -126,7 +129,7 @@ $loggedIn = isset($_SESSION['username']);
         </div>
       </div>
     </footer>
-
+<!-- akhir dari footer -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

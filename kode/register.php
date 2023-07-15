@@ -44,6 +44,7 @@
     </style>
   </head>
   <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#footer">
         <img
@@ -62,6 +63,7 @@
         </ul>
       </div>
     </nav>
+    <!-- isi -->
     <div class="tengahh">
       <div class="container mt-5">
         <div class="row">
@@ -128,7 +130,7 @@
         </div>
       </div>
     </div>
-
+<!-- var untuk mengambil elemen dengan id -->
     <script>
       function validatePassword() {
         var username = document.getElementById("username").value;
@@ -140,29 +142,30 @@
           "confirm-password-error"
         );
         var isValid = true;
-
+// jika username kosong 
         if (username.trim() === "") {
           usernameError.textContent = "Username harus diisi.";
           isValid = false;
         } else {
           usernameError.textContent = "";
         }
-
+// jika pw kosong
         if (password.trim() === "") {
           passwordError.textContent = "Kata Sandi harus diisi.";
           isValid = false;
         } else {
           passwordError.textContent = "";
         }
-
+// jika konfir pw kosong
         if (confirmPassword.trim() === "") {
           confirmPasswordError.textContent = "Konfirmasi Kata Sandi harus diisi.";
           isValid = false;
         } else {
           confirmPasswordError.textContent = "";
         }
-
+// jika isvalid sesuai, maka dilakukan if selanjutnya
         if (isValid) {
+          // jika pw dan konfir pw tdk sama maka muncul pesn error
           if (password !== confirmPassword) {
             confirmPasswordError.textContent = "Password tidak sesuai.";
           } else {

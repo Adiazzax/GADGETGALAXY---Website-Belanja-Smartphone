@@ -1,10 +1,13 @@
+
 <?php
+// memeriksa apakah pengguna sudah login atau belum
 session_start();
 if (isset($_SESSION['username'])) {
   $loggedIn = true;
 } else {
   $loggedIn = false;
 }
+// jika pengguna logout maka akan menuju halaman login.php
 if (isset($_GET['logout'])) {
   unset($_SESSION['username']);
   header("Location: login.php");
@@ -34,6 +37,7 @@ if (isset($_GET['logout'])) {
   </style>
 </head>
 <body>
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="#footer">
       <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
@@ -47,6 +51,8 @@ if (isset($_GET['logout'])) {
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
+          <!-- jika pengguna login maka akna menampilkan tulisabn logout, dan jika pengguna belum login akan
+           menampilkan logo account -->
           <?php
           if ($loggedIn) {
             echo '<a class="nav-link" href="?logout=true">Logout</a>';
@@ -60,7 +66,8 @@ if (isset($_GET['logout'])) {
       </ul>
     </div>
   </nav>
-
+<!-- akhir navbar
+<!-isi -->
   <div class="tengah">
     <div class="container mt-5">
       <h1>Akun Penjual</h1>
@@ -77,6 +84,7 @@ if (isset($_GET['logout'])) {
     </div>
   </div>
   <br><br>
+  <!-- footer -->
   <footer class="bg-light">
     <div class="container">
       <div class="row">

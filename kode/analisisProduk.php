@@ -34,6 +34,7 @@
   </style>
 </head>
 <body>
+  <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <a class="navbar-brand" href="#footer">
     <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
@@ -55,7 +56,7 @@
     </ul>
   </div>
 </nav>
-
+<!-- isi -->
 <div class="tengah">
   <h1 class="judul">Analisis Penjualan dan Rincian Penghasilan</h1>
   <div class="charts-container">
@@ -64,6 +65,7 @@
   </div>
 </div>
 <br><br>
+<!-- footer -->
 <footer class="bg-light">
   <div class="container">
     <div class="row">
@@ -115,7 +117,7 @@
     </div>
   </div>
 </footer>
-
+<!-- JS untuk menampilkan diagram baris -->
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.28.3/dist/apexcharts.min.js"></script>
 <script>
   var salesData = [

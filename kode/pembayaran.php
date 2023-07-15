@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+  <!-- koneksi database -->
 <?php
 $servername = "localhost";
 $username = "root";
@@ -26,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p>Username atau password salah.</p>";
   }
 }
-
+// memulai sesi untuk mengecek apakah pengguna sudah login atau belum
 session_start();
 $loggedIn = false;
 
@@ -35,7 +36,7 @@ if (isset($_SESSION['username'])) {
 }
 
 ?>
-
+<!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="#footer">
       <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
@@ -49,6 +50,7 @@ if (isset($_SESSION['username'])) {
       </ul>
     </div>
   </nav>
+  <!-- isi -->
   <div class="container mt-5">
     <br><br><br>
     <h2 class="text-center">Pembayaran</h2>
@@ -100,7 +102,7 @@ if (isset($_SESSION['username'])) {
   </div>
 
   <br>
-
+<!-- footer -->
   <footer class="bg-light">
       <div class="container">
         <div class="row">
@@ -175,6 +177,7 @@ if (isset($_SESSION['username'])) {
   </div>
 
   <script>
+    // supaya form alamat wajib diisi
     function validateForm() {
       var alamat = document.getElementById('alamat').value;
       alamat = alamat.trim();
@@ -188,7 +191,7 @@ if (isset($_SESSION['username'])) {
 
       return true;
     }
-
+// fungsi aritmatika utk menghitung jumlalh pembelian sesuai inputan jumlah produk yg dibeli
     function updateTotalPrice() {
       var jumlahPembelian = parseInt(document.getElementById('jumlah-pembelian').value);
       var totalPrice = document.getElementById('total-price');
@@ -197,9 +200,9 @@ if (isset($_SESSION['username'])) {
 
       totalPrice.textContent = 'Total Harga: $' + hargaProduk.toFixed(2);
     }
-
+// ketika jumlah produk diubah, maka function updatetotalprice akna dipanggil
     document.getElementById('jumlah-pembelian').addEventListener('input', updateTotalPrice);
-
+// mencegah perilaku default button. seperti memperbarui halaman
     document.getElementById('bayarButton').addEventListener('click', function(e) {
       e.preventDefault();
 
@@ -216,7 +219,7 @@ if (isset($_SESSION['username'])) {
           // Jika pengguna telah login, lanjutkan ke halaman bayar.php
           form.submit();
         } else {
-          // Jika pengguna belum login, tampilkan pop-up "Harus login terlebih dahulu" dan arahkan ke halaman login.com setelah menekan tombol "OK"
+          // Jika pengguna belum login, tampilkan pop-up "Harus login terlebih dahulu" dan arahkan ke halaman login.php setelah menekan tombol "OK"
           $('#loginPopup').modal('show');
         }
       } else {
@@ -230,14 +233,14 @@ if (isset($_SESSION['username'])) {
         }
       }
     });
-
+// mengambil elemen melalui id untuk ditampilkan kembali
     var productImage = document.getElementById('product-image');
     var productTitle = document.getElementById('product-title');
     var totalPrice = document.getElementById('total-price');
-
+// menjadikan var product utk switch case
     var urlParams = new URLSearchParams(window.location.search);
     var product = urlParams.get('product');
-
+// SC digunakan utk menentukan produk apa yang akan ditampilkan sesuai dengan halaman sebelumnya
     switch (product) {
       case '0':
         productImage.src = '../bahan1/samsung/s23/1.png';

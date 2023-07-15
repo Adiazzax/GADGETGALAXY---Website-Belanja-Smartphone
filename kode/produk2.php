@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
+    <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#footer">
         <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
@@ -18,7 +19,7 @@
           </li>
 
     </nav>
-
+<!-- isi -->
     <div class="tengah">
     <div class="container mt-5">
       <div class="row">
@@ -68,7 +69,7 @@
     </div>
 
     </div>
-    
+    <!-- footer -->
     <footer class="bg-light">
       <div class="container">
         <div class="row">

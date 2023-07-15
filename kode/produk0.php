@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#footer">
         <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
@@ -19,7 +20,7 @@
         </ul>
       </div>
     </nav>
-
+<!-- isi -->
     <div class="tengah">
       <div class="container mt-5">
         <div class="row">
@@ -60,12 +61,13 @@
           </div>
           <div class="col-md-4">
             <h3 class="product-price">Harga: $999</h3>
+            <!-- fungsi button digunakan untuk mengirmkan isi dari variabel product untuk halaman pembayaran.php -->
             <a href="pembayaran.php?product=0" class="btn btn-dark">Beli Produk</a>
           </div>
         </div>
       </div>
     </div>
-    
+    <!-- footer -->
     <footer class="bg-light">
       <div class="container">
         <div class="row">
@@ -120,6 +122,7 @@
     </footer>
 
     <script>
+      // function ketika menekan button akan direct ke halaman yg dituju
       function redirectToNewPage() {
         window.location.href = 'pembayaran.php';
       }

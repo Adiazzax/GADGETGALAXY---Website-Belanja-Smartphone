@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <a class="navbar-brand" href="#footer">
       <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
@@ -35,14 +36,16 @@
       </ul>
       <ul class="navbar-nav">
         <li class="nav-item">
+          <!-- memerika status pengguna -->
           <?php
           session_start();
+          // dimulai dengan belum login
           $loggedIn = false;
-
+// jika sudah login, maka menjadi true
           if (isset($_SESSION['username'])) {
             $loggedIn = true;
           }
-
+// jika status true maka akan pergi ke halaman akun dan jika belum login akan pergi ke halaman login
           if ($loggedIn) {
             echo '<a class="nav-link" href="account.php">';
             echo '<img src="../bahan1/icon-user.png" alt="Account Icon" height="25" class="mr-1" />';
@@ -57,6 +60,7 @@
       </ul>
     </div>
   </nav>
+  <!-- isi -->
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -165,7 +169,7 @@
       </div>
     </div>
   </div>
-
+<!-- footer -->
   <footer class="bg-light">
     <div class="container">
       <div class="row">
