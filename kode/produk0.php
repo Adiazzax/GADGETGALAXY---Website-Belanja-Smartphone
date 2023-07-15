@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#footer">
         <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
         GADGETGALAXY
@@ -16,61 +16,59 @@
           <li class="nav-item">
             <a class="nav-link" href="home.php">Home</a>
           </li>
+        </ul>
+      </div>
     </nav>
 
     <div class="tengah">
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="slideshow">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../bahan1/samsung/s23/1.png" class="d-block w-100" alt="Slide 1">
-        </div>
-        <div class="carousel-item">
-          <img src="../bahan1/samsung/s23/2.png" class="d-block w-100" alt="Slide 2">
-        </div>
-        <div class="carousel-item">
-          <img src="../bahan1/samsung/s23/3.png" class="d-block w-100" alt="Slide 3">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="slideshow">
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../bahan1/samsung/s23/1.png" class="d-block w-100" alt="Slide 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../bahan1/samsung/s23/2.png" class="d-block w-100" alt="Slide 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../bahan1/samsung/s23/3.png" class="d-block w-100" alt="Slide 3">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h2 class="product-title">Samsung Galaxy S21</h2>
+            <p class="product-description">Deskripsi Produk</p>
+            <p>RAM 8/256<br>Chipset Sanpdragon 8 gen 2<br>Layar Super Amoled</p>
+          </div>
+          <div class="col-md-4">
+            <h3 class="product-price">Harga: $999</h3>
+            <a href="pembayaran.php?product=0" class="btn btn-dark">Beli Produk</a>
           </div>
         </div>
-        <div class="col-md-4">
-  <h2 class="product-title">Samsung Galaxy S21</h2>
-  <p class="product-description">Deskripsi Produk</p>
-  <p>RAM 8/256<br>Chipset Sanpdragon 8 gen 2<br>Layar Super Amoled</p>
-</div>
-<div class="col-md-4">
-  <h3 class="product-price">Harga: $999</h3>
-  <a href="pembayaran.php?product=0" class="btn btn-dark">Beli Produk</a>
-
-</div>
-
       </div>
-    </div>
-
     </div>
     
     <footer class="bg-light">
       <div class="container">
-      <div class="row">
+        <div class="row">
           <div class="col-md-6">
             <a href="#">
               <img src="../bahan1/jualhape store (2).png" alt="Marketplace Logo" height="200">
@@ -120,11 +118,12 @@
         </div>
       </div>
     </footer>
+
     <script>
-  function redirectToNewPage() {
-    window.location.href = 'pembayaran.php';
-  }
-</script>
+      function redirectToNewPage() {
+        window.location.href = 'pembayaran.php';
+      }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

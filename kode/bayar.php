@@ -7,7 +7,7 @@
   <style>
     body {
       background-color: #ffff;
-      overflow: hidden; /* Menyembunyikan scroll */
+      overflow: hidden;
     }
     .jumbotron {
       background-color: #fff;

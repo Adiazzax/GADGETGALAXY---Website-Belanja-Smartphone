@@ -8,80 +8,81 @@
   <style>
     #chart-container {
       width: 800px;
-      margin: 0 auto;
+      height: 350px;
+      margin-right: 30px;
+    }
+
+    #line-chart-container {
+      width: 800px;
+      height: 350px;
+    }
+
+    .charts-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .judul {
+      text-align: center;
     }
   </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <a class="navbar-brand" href="#footer">
-        <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
-        GADGETGALAXY
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="homeadmin.php">Home</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <?php
-              session_start();
-              $loggedIn = false;
+  <a class="navbar-brand" href="#footer">
+    <img src="../bahan1/jualhape store (3).png" alt="Marketplace Logo" height="60" class="mr-2" />
+    GADGETGALAXY
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="homeadmin.php">Home</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <?php
+          session_start();
+          $loggedIn = false;
 
-              if (isset($_SESSION['username'])) {
-                $loggedIn = true;
-              }
+          if (isset($_SESSION['username'])) {
+            $loggedIn = true;
+          }
 
-              if ($loggedIn) {
-                echo '<a class="nav-link" href="akunadmin.php">';
-                echo '<img src="../bahan1/icon-user.png" alt="Account Icon" height="25" class="mr-1" />';
-                echo '</a>';
-              } else {
-                echo '<a class="nav-link" href="login.php">';
-                echo '<img src="../bahan1/icon-user.png" alt="Account Icon" height="25" class="mr-1" />';
-                echo '</a>';
-              }
-            ?>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="tengah">
-    <h1>Analisis Penjualan</h1>
-  <div id="chart-container"></div>
+          if ($loggedIn) {
+            echo '<a class="nav-link" href="akunadmin.php">';
+            echo '<img src="../bahan1/icon-user.png" alt="Account Icon" height="25" class="mr-1" />';
+            echo '</a>';
+          } else {
+            echo '<a class="nav-link" href="login.php">';
+            echo '<img src="../bahan1/icon-user.png" alt="Account Icon" height="25" class="mr-1" />';
+            echo '</a>';
+          }
+        ?>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.28.3/dist/apexcharts.min.js"></script>
-  <script>
-    var salesData = [
-      { year: '2018', amount: 500 },
-      { year: '2019', amount: 800 },
-      { year: '2020', amount: 1200 },
-      { year: '2021', amount: 1500 },
-      { year: '2022', amount: 2000 },
-      { year: '2023', amount: 2500 }
-    ];
-    var chartData = salesData.map(function(item) {
-      return { x: item.year, y: item.amount };
-    });
-    var chartOptions = {
-      series: [{ name: 'Penjualan', data: chartData }],
-      chart: { type: 'line', height: 350 },
-      xaxis: { type: 'category' },
-      yaxis: { title: { text: 'Jumlah Penjualan' } },
-      title: { text: 'Analisis Penjualan' }
-    };
-    var chart = new ApexCharts(document.querySelector("#chart-container"), chartOptions);
-    chart.render();
-  </script>
-    </div>
-    <br><br>
-    <footer class="bg-light">
+<div class="tengah">
+  <h1 class="judul">Analisis Penjualan dan Rincian Penghasilan</h1>
+  <div class="charts-container">
+    <div id="chart-container"></div>
+    <div id="line-chart-container"></div>
+  </div>
+</div>
+
+<footer class="bg-light">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -132,5 +133,57 @@
     </div>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.28.3/dist/apexcharts.min.js"></script>
+<script>
+  var salesData = [
+    { year: '2018', amount: 500 },
+    { year: '2019', amount: 800 },
+    { year: '2020', amount: 1200 },
+    { year: '2021', amount: 1500 },
+    { year: '2022', amount: 2000 },
+    { year: '2023', amount: 2500 }
+  ];
+  var chartData = salesData.map(function(item) {
+    return { x: item.year, y: item.amount };
+  });
+  var chartOptions = {
+    series: [{ name: 'Penjualan', data: chartData }],
+    chart: { type: 'line', height: 350 },
+    xaxis: { type: 'category' },
+    yaxis: { title: { text: 'Jumlah Penjualan' } },
+    title: { text: 'Analisis Penjualan' }
+  };
+  var chart = new ApexCharts(document.querySelector("#chart-container"), chartOptions);
+  chart.render();
+
+  var incomeData = [
+    { month: 'Januari', income: 5000 },
+    { month: 'Februari', income: 7000 },
+    { month: 'Maret', income: 6000 },
+    { month: 'April', income: 8000 },
+    { month: 'Mei', income: 9000 },
+    { month: 'Juni', income: 10000 },
+    { month: 'Juli', income: 12000 },
+    { month: 'Agustus', income: 11000 },
+    { month: 'September', income: 9000 },
+    { month: 'Oktober', income: 8000 },
+    { month: 'November', income: 10000 },
+    { month: 'Desember', income: 15000 }
+  ];
+  var lineChartData = incomeData.map(function(item) {
+    return { x: item.month, y: item.income };
+  });
+  var lineChartOptions = {
+    series: [{ name: 'Penghasilan', data: lineChartData }],
+    chart: { type: 'line', height: 350 },
+    xaxis: { type: 'category' },
+    yaxis: { title: { text: 'Jumlah Penghasilan' } },
+    title: { text: 'Rincian Penghasilan' }
+  };
+  var lineChart = new ApexCharts(document.querySelector("#line-chart-container"), lineChartOptions);
+  lineChart.render();
+</script>
+
 </body>
 </html>
