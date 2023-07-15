@@ -71,7 +71,7 @@
     
     <footer class="bg-light">
       <div class="container">
-      <div class="row">
+        <div class="row">
           <div class="col-md-6">
             <a href="#">
               <img src="../bahan1/jualhape store (2).png" alt="Marketplace Logo" height="200">
@@ -110,11 +110,11 @@
             <div class="row mt-5">
               <div class="col-md-6">
                 <h5 class="mb-4">KAMI MENERIMA</h5>
-                <img src="../bahan1/Footer-payment_25-jan-23_.png" alt="Accepted Payment Methods" height="150">
+                <img src="../bahan1/Footer-payment_25-jan-23_.png" height="150">
               </div>
               <div class="col-md-6">
                 <h5 class="mb-4">JASA PENGIRIMAN</h5>
-                <img src="../bahan1/shipping-footer.png" alt="Shipping Methods" height="80">
+                <img src="../bahan1/shipping-footer.png" height="80">
               </div>
             </div>
           </div>

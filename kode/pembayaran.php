@@ -101,60 +101,60 @@ if (isset($_SESSION['username'])) {
 
   <br>
 
-  <footer class="bg-light" id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <a href="#">
-            <img src="../bahan1/jualhape store (2).png" alt="Marketplace Logo" height="200">
-          </a>
-          <p class="mt-3">"GADGETGALAXY adalah destinasi utama bagi pecinta teknologi untuk menjelajahi dan menemukan dunia smartphone terkini. Dengan koleksi terlengkap dari merek terkemuka dan inovasi terbaru, kami hadir untuk memberikan pengalaman belanja yang mengesankan dan memenuhi kebutuhan digital Anda. Dengan komitmen kami pada kualitas, layanan pelanggan yang unggul, dan ketertarikan terhadap perkembangan teknologi terbaru, GADGETGALAXY menjadi rekan setia Anda dalam menjelajahi galaksi smartphone. Selamat datang di GADGETGALAXY, tempat dimana teknologi bertemu dengan gaya!"</p>
-          <p>Jika Anda ingin bantuan atau memiliki masukan, silahkan hubungi kami:</p>
-          <ul>
-            <li>Jam 9:30 - 17:30 (Senin s.d. Jumat)</li>
-            <li>Jam 9:30 - 15:00 (Sabtu)</li>
-            <li>Email : <a href="mailto:adiazzax@gmail.com">customercare@ggglx.com</a></li>
-            <li>Phone : 150098</li>
-            <li>WA : 0812 3456 7890</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-6">
-              <h5 class="mb-4">INFORMASI</h5>
-              <ul class="list-unstyled">
-                <li><a href="#">Tentang Kami</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privasi</a></li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <h5 class="mb-4">LAYANAN</h5>
-              <ul class="list-unstyled">
-                <li><a href="#">Cara Pemesanan</a></li>
-                <li><a href="#">Cara Pembayaran</a></li>
-                <li><a href="#">Informasi Pengiriman</a></li>
-                <li><a href="#">Lacak Pesanan</a></li>
-                <li><a href="#">Pembatalan Transaksi</a></li>
-              </ul>
-            </div>
+  <footer class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <a href="#">
+              <img src="../bahan1/jualhape store (2).png" alt="Marketplace Logo" height="200">
+            </a>
+            <p class="mt-3">"GADGETGALAXY adalah destinasi utama bagi pecinta teknologi untuk menjelajahi dan menemukan dunia smartphone terkini. Dengan koleksi terlengkap dari merek terkemuka dan inovasi terbaru, kami hadir untuk memberikan pengalaman belanja yang mengesankan dan memenuhi kebutuhan digital Anda. Dengan komitmen kami pada kualitas, layanan pelanggan yang unggul, dan ketertarikan terhadap perkembangan teknologi terbaru, GADGETGALAXY menjadi rekan setia Anda dalam menjelajahi galaksi smartphone. Selamat datang di GADGETGALAXY, tempat dimana teknologi bertemu dengan gaya!"</p>
+            <p>Jika Anda ingin bantuan atau memiliki masukan, silahkan hubungi kami:</p>
+            <ul>
+              <li>Jam 9:30 - 17:30 (Senin s.d. Jumat)</li>
+              <li>Jam 9:30 - 15:00 (Sabtu)</li>
+              <li>Email : <a href="mailto:adiazzax@gmail.com">customercare@ggglx.com</a></li>
+              <li>Phone : 150098</li>
+              <li>WA : 0812 3456 7890</li>
+            </ul>
           </div>
-          <div class="row mt-5">
-            <div class="col-md-6">
-              <h5 class="mb-4">KAMI MENERIMA</h5>
-              <img src="../bahan1/Footer-payment_25-jan-23_.png" alt="Accepted Payment Methods" height="150">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="mb-4">INFORMASI</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Tentang Kami</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Privasi</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h5 class="mb-4">LAYANAN</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Cara Pemesanan</a></li>
+                  <li><a href="#">Cara Pembayaran</a></li>
+                  <li><a href="#">Informasi Pengiriman</a></li>
+                  <li><a href="#">Lacak Pesanan</a></li>
+                  <li><a href="#">Pembatalan Transaksi</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="col-md-6">
-              <h5 class="mb-4">JASA PENGIRIMAN</h5>
-              <img src="../bahan1/shipping-footer.png" alt="Shipping Methods" height="80">
+            <div class="row mt-5">
+              <div class="col-md-6">
+                <h5 class="mb-4">KAMI MENERIMA</h5>
+                <img src="../bahan1/Footer-payment_25-jan-23_.png" height="150">
+              </div>
+              <div class="col-md-6">
+                <h5 class="mb-4">JASA PENGIRIMAN</h5>
+                <img src="../bahan1/shipping-footer.png" height="80">
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Pop-up Modal -->
+  <!-- Pop-up info -->
   <div class="modal fade" id="loginPopup" tabindex="-1" role="dialog" aria-labelledby="loginPopupLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

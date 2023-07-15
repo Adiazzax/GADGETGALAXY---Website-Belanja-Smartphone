@@ -117,11 +117,11 @@
         <div class="row mt-5">
           <div class="col-md-6">
             <h5 class="mb-4">KAMI MENERIMA</h5>
-            <img src="../bahan1/Footer-payment_25-jan-23_.png" alt="Accepted Payment Methods" height="150">
+            <img src="../bahan1/Footer-payment_25-jan-23_.png"height="150">
           </div>
           <div class="col-md-6">
             <h5 class="mb-4">JASA PENGIRIMAN</h5>
-            <img src="../bahan1/shipping-footer.png" alt="Shipping Methods" height="80">
+            <img src="../bahan1/shipping-footer.png"height="80">
           </div>
         </div>
       </div>
