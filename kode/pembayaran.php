@@ -81,7 +81,6 @@ if (isset($_SESSION['username'])) {
           <div class="form-group">
             <label for="kode-voucher">Kode Voucher</label>
             <input type="text" class="form-control" id="kode-voucher" name="kode_voucher" placeholder="Masukkan kode voucher">
-            <small id="kode-voucher-error" class="text-danger"></small>
           </div>
           <div class="form-group">
             <label for="jumlah-pembelian">Jumlah Pembelian</label>
@@ -225,7 +224,7 @@ if (isset($_SESSION['username'])) {
       } else {
         // Tampilkan pesan error di form
         alamatInput.classList.remove('is-invalid');
-        document.getElementById('alamat-error').textContent = '';
+        document.getElementById('alamat-error').textContent = 'Alamat pengiriman harus diisi!';
 
         if (errors['alamat']) {
           alamatInput.classList.add('is-invalid');
