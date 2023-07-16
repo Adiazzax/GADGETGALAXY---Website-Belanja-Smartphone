@@ -201,7 +201,8 @@ if (isset($_SESSION['username'])) {
     }
 // ketika jumlah produk diubah, maka function updatetotalprice akna dipanggil
     document.getElementById('jumlah-pembelian').addEventListener('input', updateTotalPrice);
-// mencegah perilaku default button. seperti memperbarui halaman
+// memvalidasi formulir pembayaran, 
+// memeriksa status login pengguna, dan menangani tindakan yang sesuai berdasarkan kondisi tersebut.
     document.getElementById('bayarButton').addEventListener('click', function(e) {
       e.preventDefault();
 
@@ -225,11 +226,6 @@ if (isset($_SESSION['username'])) {
         // Tampilkan pesan error di form
         alamatInput.classList.remove('is-invalid');
         document.getElementById('alamat-error').textContent = 'Alamat pengiriman harus diisi!';
-
-        if (errors['alamat']) {
-          alamatInput.classList.add('is-invalid');
-          document.getElementById('alamat-error').textContent = errors['alamat'];
-        }
       }
     });
 // mengambil elemen melalui id untuk ditampilkan kembali
