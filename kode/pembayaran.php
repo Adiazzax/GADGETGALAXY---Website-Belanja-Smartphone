@@ -94,7 +94,7 @@ if (isset($_SESSION['username'])) {
               <option value="e-wallet">E-Wallet</option>
             </select>
           </div>
-          <button type="submit" class="btn btn-primary" id="bayarButton">Bayar</button>
+          <button type="submit" class="btn btn-primary btn-block" id="bayarButton">Bayar</button>
         </form>
       </div>
     </div>
