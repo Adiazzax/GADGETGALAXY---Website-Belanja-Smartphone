@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
     if ($isValid) {
         $sql = "SELECT * FROM usermasuk WHERE username='$username'";
         $result = $conn->query($sql);
-// berfungsi apakah username susai dg database atau tidak.
+// berfungsi apakah username sesuai dg database atau tidak.
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             // mengecek apakah pw sesuai dengan databasse, jika iya maka var username akan dibuat
@@ -51,7 +51,7 @@ if (isset($_POST['login'])) {
                 $errors['password'] = "Password salah.";
             }
         } else {
-          // jika suername salah maka akan menampilkan pesan error
+          // jika username salah maka akan menampilkan pesan error
             $errors['username'] = "Username tidak ditemukan.";
         }
     }
