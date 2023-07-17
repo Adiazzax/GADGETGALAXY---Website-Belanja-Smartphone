@@ -26,7 +26,6 @@ $loggedIn = isset($_SESSION['username']);
         cursor: pointer;
         transition: background-color 0.3s;
       }
-
       .account-list li:hover {
         background-color: #e9ecef;
       }

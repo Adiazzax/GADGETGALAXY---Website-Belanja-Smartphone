@@ -122,7 +122,7 @@
     </footer>
 
     <script>
-      // function ketika menekan button akan direct ke halaman yg dituju
+      // function ketika menekan button akan pergi ke halaman yg dituju
       function redirectToNewPage() {
         window.location.href = 'pembayaran.php';
       }

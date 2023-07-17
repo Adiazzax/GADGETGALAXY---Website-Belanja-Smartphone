@@ -117,7 +117,7 @@
     </div>
   </div>
 </footer>
-<!-- JS untuk menampilkan diagram baris -->
+<!-- JS untuk menampilkan diagram baris menggunakna library apexcharts-->
 <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.28.3/dist/apexcharts.min.js"></script>
 <script>
   var salesData = [
@@ -128,6 +128,7 @@
     { year: '2022', amount: 2000 },
     { year: '2023', amount: 2500 }
   ];
+  // mengubah array diatas menjadi bentuk x dan y
   var chartData = salesData.map(function(item) {
     return { x: item.year, y: item.amount };
   });
@@ -138,6 +139,7 @@
     yaxis: { title: { text: 'Jumlah Penjualan' } },
     title: { text: 'Analisis Penjualan' }
   };
+  // menampilkan diagram
   var chart = new ApexCharts(document.querySelector("#chart-container"), chartOptions);
   chart.render();
 
@@ -155,6 +157,7 @@
     { month: 'November', income: 10000 },
     { month: 'Desember', income: 15000 }
   ];
+    // mengubah array diatas menjadi bentuk x dan y
   var lineChartData = incomeData.map(function(item) {
     return { x: item.month, y: item.income };
   });
@@ -165,6 +168,7 @@
     yaxis: { title: { text: 'Jumlah Penghasilan' } },
     title: { text: 'Rincian Penghasilan' }
   };
+  // tampil diagram
   var lineChart = new ApexCharts(document.querySelector("#line-chart-container"), lineChartOptions);
   lineChart.render();
 </script>
