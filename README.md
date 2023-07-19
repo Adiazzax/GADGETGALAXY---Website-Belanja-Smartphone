@@ -4,4 +4,4 @@
 <br>Adi Karawinata S 17212003
 <br>Agus Hermawan 17212006
 <br>Azis Saepul Rahman 17211011
-<br>M. ridwan Jamil 17213013
+<br>M. Ridwan Jamil 17213013
