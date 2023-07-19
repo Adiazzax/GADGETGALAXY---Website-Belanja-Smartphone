@@ -139,27 +139,35 @@ if (isset($_POST['login'])) {
           <form method="POST" action="">
             <div class="form-group">
               <label for="username">Username</label>
-              <input
-                type="text"
-                class="form-control"
-                id="username"
-                name="username"
-                placeholder="Masukkan username"
-              />
-              <!-- pesan error -->
-              <?php echo isset($errors['username']) ? '<small class="text-danger">' . $errors['username'] . '</small>' : ''; ?>
+               <input
+                  type="username"
+                  class="form-control <?php echo isset($errors['username']) ? 'is-invalid' : ''; ?>"
+                  id="username"
+                  name="username"
+                  placeholder="Masukkan username"
+                  value="<?php echo isset($_POST['username']) ? $_POST['username'] : ''; ?>"
+                />
+                <!-- mencegah hilangnya value yang telah dimasukkan -->
+                <!-- pesan error -->
+                <?php if (isset($errors['username'])) { ?>
+                    <small class="text-danger"><?php echo $errors['username']; ?></small>
+                <?php } ?>
             </div>
             <div class="form-group">
               <label for="password">Kata Sandi</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                name="password"
-                placeholder="Masukkan kata sandi"
-              />
-              <!-- menampilkan pesan error -->
-              <?php echo isset($errors['password']) ? '<small class="text-danger">' . $errors['password'] . '</small>' : ''; ?>
+             <input
+                  type="password"
+                  class="form-control <?php echo isset($errors['password']) ? 'is-invalid' : ''; ?>"
+                  id="password"
+                  name="password"
+                  placeholder="Masukkan kata sandi"
+                  value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>"
+                />
+                <!-- mencegah hilangnya value yang telah dimasukkan -->
+                <!-- pesan error -->
+                <?php if (isset($errors['password'])) { ?>
+                    <small class="text-danger"><?php echo $errors['password']; ?></small>
+                <?php } ?>
             </div>
             <div class="form-group">
               <a href="forgot-password.php">Lupa kata sandi?</a>
